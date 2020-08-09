@@ -18,7 +18,7 @@ optimise_portfolio_by_USD_amount = 15000
 plt.style.use('fivethirtyeight')
 
 # Stock symbols
-assets = ['FB', 'AMZN', 'AAPL', 'NFLX', 'GOOG']
+assets = ['FB', 'AMZN', 'AAPL', 'NFLX', 'GOOG', 'GS']
 
 # Portfolio weights (total weights = 1)
 weights = np.array([0.2, 0.2, 0.2, 0.2, 0.2])
@@ -44,7 +44,7 @@ for c in adjusted_closed_price_df.columns.values:
 plt.title(title)
 plt.xlabel('Date', fontsize=18)
 plt.ylabel('Adjusted Price (USD)', fontsize=18)
-plt.legend(adjusted_closed_price_df.columns.values, loc='upper right')
+plt.legend(adjusted_closed_price_df.columns.values, loc='upper left')
 plt.show()
 
 # Calculate the daily simple return, (new stock price - old stock price) / old stock price
